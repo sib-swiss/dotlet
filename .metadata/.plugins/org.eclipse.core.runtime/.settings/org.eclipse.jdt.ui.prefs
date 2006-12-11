@@ -1,0 +1,11 @@
+#Tue Sep 12 17:01:55 GMT+02:00 2006
+org.eclipse.jdt.ui.javadoclocations.migrated=true
+useAnnotationsPrefPage=true
+org.eclipse.jface.textfont=1|Monospace|10|0|GTK|1|;
+org.eclipse.jdt.ui.editor.tab.width=
+org.eclipse.jdt.ui.formatterprofiles.version=10
+proposalOrderMigrated=true
+tabWidthPropagated=true
+useQuickDiffPrefPage=true
+fontPropagated=true
+eclipse.preferences.version=1
