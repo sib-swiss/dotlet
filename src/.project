@@ -19,7 +19,7 @@
 		<link>
 			<name>bin</name>
 			<type>2</type>
-			<location>/home/omartin/dotlet/bin</location>
+			<location>../bin</location>
 		</link>
 	</linkedResources>
 </projectDescription>
