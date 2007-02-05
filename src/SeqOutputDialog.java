@@ -293,7 +293,7 @@ public class SeqOutputDialog extends Frame
 		
 		StringBuffer temp = new StringBuffer("\n\n>" + nameSeq + "/");
 		/* StringBuffer temp = new StringBuffer("\n\n>" + nameSeq + "_");
-		temp.append(seqNumber + " "); */
+		   temp.append(seqNumber + " "); */
 		temp.append((startSeq+1) + "-" + (endSeq+1));
 		temp.append("\n");
 		temp.append(insertNewLine(new StringBuffer(this.seqPairWidget.getSequence(!vertRef,
