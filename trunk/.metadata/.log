@@ -1,0 +1,16 @@
+!SESSION 2006-09-12 17:10:19.089 -----------------------------------------------
+eclipse.buildId=M20060629-1905
+java.fullversion=GNU libgcj 4.0.1 20050727 (Red Hat 4.0.1-5)
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86
+
+!ENTRY org.eclipse.core.jobs 4 2 2006-09-12 17:10:44.126
+!MESSAGE An internal error occurred during: "Identifier Update Job".
+!STACK 0
+java.util.ConcurrentModificationException
+   at java.util.HashMap$HashIterator.hasNext() (/usr/lib/libgcj.so.6.0.0)
+   at org.eclipse.ui.internal.activities.Activity.isMatch(java.lang.String) (Unknown Source)
+   at org.eclipse.ui.internal.activities.MutableActivityManager$2.run(org.eclipse.core.runtime.IProgressMonitor) (Unknown Source)
+   at org.eclipse.core.internal.jobs.Worker.run() (Unknown Source)
+   at .GC_start_routine (/usr/lib/libgcj.so.6.0.0)
+   at .__clone (/lib/libc-2.3.5.so)

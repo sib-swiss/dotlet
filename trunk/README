@@ -1,0 +1,26 @@
+
+
+This is the repository for the Dotlet sources, binaries, and documentation.
+
+Please read the file COPYRIGHT.
+
+To install:
+
+Download, unzip and untar the archive file `dotlet-*.tar.gz' in a
+directory of your choice. The class files are packed into a .jar file,
+`dotlet.jar'. If you wish to use Dotlet as a stand-alone application,
+your Java virtual machine must be able to fine this file somehow.
+Sometimes this is a matter of setting the CLASSPATH environment
+variable, but your mileage may vary, and the best is to read your Java
+environment's documentation. If you wish to use Dotlet as an applet,
+the .jar file must reside somewhere in your Web server document
+hierarchy. Also, the HTML documents that are to include Dotlet must
+contain the appropriate <APPLET> or <OBJECT> tag.  See file Dotlet.html
+for an example.
+
+Included in the distribution are two Perl scripts, mat2java.pl and
+cmp2java.pl, that convert symbol comparison tables in the .mat and .cmp
+formats into Java code suitable for use with Dotlet.
+
+Thomas Junier
+<Thomas.Junier@isrec.unil.ch> 
