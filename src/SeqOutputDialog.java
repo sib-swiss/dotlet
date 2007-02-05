@@ -149,7 +149,8 @@ public class SeqOutputDialog extends Frame
 			System.out.println("endOther " + endOther);
 			System.out.println("diffOther " + diffOther);*/
 			
-			refSeq.append(" " + String.valueOf(startRef+1) + "-" + String.valueOf(endRef+1+window) + "\n");
+			// refSeq.append(" " + String.valueOf(startRef+1) + "-" + String.valueOf(endRef+1+window) + "\n");
+			refSeq.append("/" + String.valueOf(startRef+1) + "-" + String.valueOf(endRef+1+window) + "\n");
 			refSeq.append(insertNewLine(new StringBuffer(this.seqPairWidget.getSequence(vertRef, startRef, 
 					endRef + window)), 0));	
 
@@ -290,8 +291,9 @@ public class SeqOutputDialog extends Frame
 		int startSeq = i;
 		int endSeq = i + seqLength + window;
 		
-		StringBuffer temp = new StringBuffer("\n\n>" + nameSeq + "_");
-		temp.append(seqNumber + " ");
+		StringBuffer temp = new StringBuffer("\n\n>" + nameSeq + "/");
+		/* StringBuffer temp = new StringBuffer("\n\n>" + nameSeq + "_");
+		temp.append(seqNumber + " "); */
 		temp.append((startSeq+1) + "-" + (endSeq+1));
 		temp.append("\n");
 		temp.append(insertNewLine(new StringBuffer(this.seqPairWidget.getSequence(!vertRef,
