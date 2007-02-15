@@ -81,7 +81,7 @@ public class InputPanel extends Panel implements ActionListener,ItemListener{
   }
   public void actionPerformed(ActionEvent e){
     if(e.getSource()==inputButton){
-    	/*modification by Olivier*/
+    	/*modification by Olivier*/    	
     	//to avoid opening multiple dialog windows
     	if(this.dialog == null)
     	{
