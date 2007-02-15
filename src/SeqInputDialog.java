@@ -82,6 +82,11 @@ public class SeqInputDialog extends Frame
 					
 				
 		    inputPanel.addSequence (nameField.getText (), tmp.toString ());
+		    
+		    /*modificaiton by Olivier*/
+			inputPanel.setDialog(null);
+			/*end modification*/
+		    
 		    dispose ();
 		}
     }
