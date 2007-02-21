@@ -121,9 +121,32 @@ public class VisualByteMap{
     	int result = 0;
     	x/=zoom;
         y/=zoom;
+        
         int mapX=x/SIZE;
         int mapY=y/SIZE;
         int offset=(y-mapY*SIZE)*SIZE+(x-mapX*SIZE);        
+  
+        /*int temp = this.data.length;
+        System.out.println(temp);
+        System.out.println(this.data[0].length);
+        System.out.println(this.data[0][0].length);*/
+        
+        /* modif by Sebastien: to avoid out of range selections
+         * It should be better to check x and y values but I need a
+         * way to get sequence lengths from here
+         * And to act on mouse coordinates: out of range = bitmap limit
+         * So it is only partially fixed !
+         */ 
+        if (mapX >= this.data.length)      		
+        {
+        	mapX=this.data.length-1;
+        	//System.out.println("-");
+        }
+        if (mapY >= this.data[0].length)      		
+        {
+        	//System.out.println("+");
+        	mapY=this.data[0].length-1;
+        }    
         
         try
         {
@@ -132,6 +155,7 @@ public class VisualByteMap{
         }
         catch(ArrayIndexOutOfBoundsException e)
         {
+        	//System.err.println("mapX: "+mapX + "\nmapY: "+mapY +"\nx: "+x+"\ny: "+y+"\nfullWidth=totalWidth"+fullWidth+totalWidth);
         	System.err.println("ArrayIndexOutOfBoundsException " + e.getMessage());
         	System.exit(1);
         }
