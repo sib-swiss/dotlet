@@ -43,7 +43,7 @@ public class SeqPairPanel extends Panel implements AdjustmentListener{
     }
     public Dimension getPreferredSize(){
 		Dimension dim=horizScrollbar.getPreferredSize();
-		return new Dimension(255,100+2*dim.height+2*vspace);
+		return new Dimension(255,110+2*dim.height+2*vspace);
     }    
     public void setWidget(String horizontalName,
 			  String horizontalSequence,

@@ -9,7 +9,7 @@ import java.awt.image.ImageObserver;
 
 public class VisualByteMap{
   
-  private int fullWidth,fullHeight;                  // lengths of both sequences
+  private int fullWidth,fullHeight;              // lengths of both sequences
   private int totalWidth,totalHeight;            // map size in pixels
   private int minValue,maxValue,rangeValue;      // values extrema and range
   private int maxX,maxY;                         // map size in submap!
@@ -136,7 +136,7 @@ public class VisualByteMap{
          * way to get sequence lengths from here
          * And to act on mouse coordinates: out of range = bitmap limit
          * So it is only partially fixed !
-         */ 
+         */
         if (mapX >= this.data.length)      		
         {
         	mapX=this.data.length-1;
@@ -155,7 +155,6 @@ public class VisualByteMap{
         }
         catch(ArrayIndexOutOfBoundsException e)
         {
-        	//System.err.println("mapX: "+mapX + "\nmapY: "+mapY +"\nx: "+x+"\ny: "+y+"\nfullWidth=totalWidth"+fullWidth+totalWidth);
         	System.err.println("ArrayIndexOutOfBoundsException " + e.getMessage());
         	System.exit(1);
         }

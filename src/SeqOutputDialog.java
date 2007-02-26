@@ -26,7 +26,7 @@ public class SeqOutputDialog extends Frame
 	private SeqPairWidget seqPairWidget;	//for direct access of variables
 	private VisualByteMap visualBM;			//for direct access of variables
 	private final int lineLength = 60;		//length of a regular line for a fasta file
-	private ArrayList sequencesSelected;		//to display sequences
+	private ArrayList sequencesSelected;	//to display sequences
 	private StringBuffer fragments1;		//to append multiple selection of fragments, first sequence
 	private StringBuffer fragments2;		//to append multiple selection of fragments, second sequence
 	
@@ -43,7 +43,10 @@ public class SeqOutputDialog extends Frame
  		super("Matching sequences in FASTA format");
 		
 		this.panelButtons = new Panel(new FlowLayout(FlowLayout.CENTER));
-		this.textArea = new TextArea("", 20, this.lineLength);
+		this.textArea = new TextArea("", 20, this.lineLength+5);
+		//Seb: +5 to keep amino acid lines of 60 residues but with space inside textarea window    
+		this.textArea.setFont(new Font("Monospaced", Font.PLAIN, 12));
+		//Seb: output sequences are monospaced to keep amino acid alignements
 		this.buttonSend = new Button("Send to browser");
 		this.buttonCancel = new Button("Cancel");
 		this.imagePanel = imagePanel;
@@ -153,7 +156,7 @@ public class SeqOutputDialog extends Frame
 			System.out.println("diffOther " + diffOther);*/
 			
 			// refSeq.append(" " + String.valueOf(startRef+1) + "-" + String.valueOf(endRef+1+window) + "\n");
-			refSeq.append("/" + String.valueOf(this.startRef+1) + "-" + String.valueOf(this.endRef+1+window) + "\n");
+			refSeq.append("/" + String.valueOf(this.startRef+1) + "-" + String.valueOf(this.endRef+window) + "\n");
 			refSeq.append(insertNewLine(new StringBuffer(this.seqPairWidget.getSequence(vertRef, this.startRef, 
 					this.endRef + window)), 0));	
 
@@ -294,7 +297,7 @@ public class SeqOutputDialog extends Frame
 		int startSeq = i;
 		int endSeq = i + seqLength + window;
 		
-		// To remove sequence redondancy
+		// Sebastien: To remove sequence redondancy
 		if(MouseSelectionMisc.width > MouseSelectionMisc.height)
 		{
 			if ( this.seqPairWidget.vsName.equals(nameSeq) && this.startRef==startSeq && this.endRef==(endSeq-window) )
@@ -309,13 +312,14 @@ public class SeqOutputDialog extends Frame
 				return; // Exit with nothing
 			}
 		}
+		
 		StringBuffer temp = new StringBuffer("\n\n>" + nameSeq + "/");
 		/* StringBuffer temp = new StringBuffer("\n\n>" + nameSeq + "_");
 		   temp.append(seqNumber + " "); */
-		temp.append((startSeq+1) + "-" + (endSeq+1));
+		temp.append((startSeq+1) + "-" + endSeq);
 		temp.append("\n");
 		temp.append(insertNewLine(new StringBuffer(this.seqPairWidget.getSequence(!vertRef,
-				startSeq, endSeq)), 0));												
+				startSeq, endSeq)), 0));
 		arraySequences.add(temp.toString());
 		
 		if(vertRef)

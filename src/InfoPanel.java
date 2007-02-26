@@ -30,7 +30,7 @@ public class InfoPanel extends Panel {
 	highScore=String.valueOf(high);
     }
     public void paint(Graphics g){
-	Font pf = new Font ("Helvetica", Font.PLAIN, 12);
+	Font pf = new Font ("Dialog", Font.PLAIN, 12);
 	g.setFont(pf);
 	if(horizontalSequence==null){return;}
 	g.drawString("horizontal: "+horizontalSequence,10,14);

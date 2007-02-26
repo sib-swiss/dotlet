@@ -158,6 +158,7 @@ public class ImagePanel extends Panel implements MouseListener,
 
 	public void mousePressed(MouseEvent e) {	
 		/*modified by Olivier*/
+		//System.out.println(e.getX() + "\t" + e.getY() + "\t" + this.posX  + "\t" + this.posY +"\n");
 		if(!e.isControlDown())
 		{
 			/*end modification*/			

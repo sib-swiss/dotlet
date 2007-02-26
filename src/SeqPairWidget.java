@@ -71,8 +71,8 @@ public abstract class SeqPairWidget extends Panel
 		addComponentListener (new ResizeHandler ());
 		// addKeyListener (new KeyHandler ());
 		
-		f = new Font ("Courier", Font.PLAIN, 12);
-		pf = new Font ("Helvetica", Font.PLAIN, 12);
+		f = new Font ("Monospaced", Font.PLAIN, 12);
+		pf = new Font ("Dialog", Font.BOLD, 12);
     }
 
     // These allow the sequences to be set later
@@ -211,11 +211,19 @@ public abstract class SeqPairWidget extends Panel
     	//horizontal seq
     	if(!seq)
     	{
+    		if (end >= hl)
+    		{
+    			end=hl;
+    		}
     		return this.hs.substring(start, end);
     	}
     	//vertical seq
     	else
     	{
+    		if (end >= vl)
+    		{
+    			end=vl;
+    		}
     		return this.vs.substring(start, end);
     	}
     }
