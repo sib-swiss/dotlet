@@ -59,6 +59,11 @@ public class ImagePanel extends Panel implements MouseListener,
 	private InfoPanel infoPanel;
 	/*end modification*/
 	
+	//Seb:
+	private int windowSize;
+	private int horizLength;
+	private int vertLength;
+		
 
 	public ImagePanel(Component visibleComponent) {
 		image = visibleComponent.createImage(maxImageWidth, maxImageHeight);
@@ -158,12 +163,31 @@ public class ImagePanel extends Panel implements MouseListener,
 
 	public void mousePressed(MouseEvent e) {	
 		/*modified by Olivier*/
-		//System.out.println(e.getX() + "\t" + e.getY() + "\t" + this.posX  + "\t" + this.posY +"\n");
+		//System.out.println((e.getX()-margin)+"\t"+(e.getY()-margin)+"\t"+posX+"\t"+posY);
 		if(!e.isControlDown())
 		{
 			/*end modification*/			
 			int x = e.getX() - margin;
 			int y = e.getY() - margin;
+			//Seb: If mouse coordinates are out of image range, coordinates are shifted to range limits
+			if ((x+posX) < 0)
+			{
+				x=0;
+			}
+			if ((y+posY) < 0)
+			{
+				y=0;
+			}
+			if ((x+posX) > (horizLength-windowSize+1))
+			{
+				//System.out.println("window: " + windowSize + " " + horizLength + " " + vertLength);
+				x=(horizLength-windowSize+1)-posX;
+			}
+			if ((y+posY) > (vertLength-windowSize+1))
+			{
+				y=(vertLength-windowSize+1)-posY;
+			}
+			
 			if (x < 0 || x >= imageWidth || y < 0 || y >= imageHeight) {
 				int decX = 0;
 				int decY = 0;
@@ -394,7 +418,7 @@ public class ImagePanel extends Panel implements MouseListener,
 		return updateRequested && !updating;
 	}
 
-	public void displayDotPlot() {
+	public void displayDotPlot(int windowSize, int horizLength, int vertLength) {
 		needRefresh = true;
 		visualByteMap.prepareScale();
 		image = createImage(imageWidth, imageHeight);
@@ -403,6 +427,10 @@ public class ImagePanel extends Panel implements MouseListener,
 		posY = 0;
 		cursorX = 0;
 		cursorY = 0;
+		//Seb:
+		this.windowSize=windowSize;
+		this.horizLength=horizLength;
+		this.vertLength=vertLength;
 		if (updateTrigger.isAlive()) {
 			/*modified by Olivier*/
 			//updateTrigger.stop();

@@ -211,6 +211,7 @@ public abstract class SeqPairWidget extends Panel
     	//horizontal seq
     	if(!seq)
     	{
+    		//Seb:
     		if (end >= hl)
     		{
     			end=hl;
@@ -220,6 +221,7 @@ public abstract class SeqPairWidget extends Panel
     	//vertical seq
     	else
     	{
+    		//Seb:
     		if (end >= vl)
     		{
     			end=vl;

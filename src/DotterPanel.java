@@ -80,8 +80,8 @@ public class DotterPanel extends Panel implements AdjustmentListener,ActionListe
     xScrollbar.setValues(0,imagePanel.getImageWidth(),0,visualByteMap.getWidth()-1);
     yScrollbar.setValues(0,imagePanel.getImageHeight(),0,visualByteMap.getHeight()-1);
   }
-  public void displayDotPlot(){
-    imagePanel.displayDotPlot();
+  public void displayDotPlot(int windowSize, int horizLength, int vertLength){
+    imagePanel.displayDotPlot(windowSize,horizLength,vertLength);
     setEnabled(true);
   }
   public void displayMessage(String s){

@@ -307,7 +307,7 @@ public class InputPanel extends Panel implements ActionListener,ItemListener{
 		  }
 		  catch(Exception e){}
 		  dotterPanel.setVisualByteMap(visualByteMap);
-		  dotterPanel.displayDotPlot();
+		  dotterPanel.displayDotPlot(windowSize,horizontalSequence.length(),verticalSequence.length());
 		  dotterPanel.setCursor(0,0);
 		  scalePanel.setEnabled(true);
 		  scalePanel.updateScale();

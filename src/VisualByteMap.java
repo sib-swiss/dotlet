@@ -131,12 +131,7 @@ public class VisualByteMap{
         System.out.println(this.data[0].length);
         System.out.println(this.data[0][0].length);*/
         
-        /* modif by Sebastien: to avoid out of range selections
-         * It should be better to check x and y values but I need a
-         * way to get sequence lengths from here
-         * And to act on mouse coordinates: out of range = bitmap limit
-         * So it is only partially fixed !
-         */
+        //Sebastien: to avoid out of range selections
         if (mapX >= this.data.length)      		
         {
         	mapX=this.data.length-1;
