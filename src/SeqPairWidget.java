@@ -420,6 +420,7 @@ public abstract class SeqPairWidget extends Panel
 		// ... and this just after
 		osg.drawString (afterMiddle, middletext + 3, h);
 		osg.drawLine (middletext, h - pcHeight, middletext, h);	// vertical line
+		//System.out.println(beforeMiddle + "\t| " + afterMiddle);
     }
 
     /*modified by Olivier*/

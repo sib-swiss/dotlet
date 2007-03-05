@@ -58,12 +58,12 @@ public class DNADNAWidget extends SeqPairWidget
 	clearClipRect (); // reset the drawing area
 
 	// Display the labels
-	drawLabel (hsName + " ", " " + hpos,
+	drawLabel (hsName + " ", " " + String.valueOf (hpos + 1),
 		   height / 2 - 2 * cHeight - pcHeight - halfGutter - 4);
-	drawLabel (vsName + " ", " " + vpos, height / 2 - halfGutter + 5);
-	drawLabel (hsName + " (revcomp'd) ", " " + hpos,
+	drawLabel (vsName + " ", " " + String.valueOf (vpos + 1), height / 2 - halfGutter + 5);
+	drawLabel (hsName + " (revcomp'd) ", " " + String.valueOf (hpos + 1),
 		   height / 2 + pcHeight + halfGutter - 4);
-	drawLabel (vsName + " ", " " + vpos,
+	drawLabel (vsName + " ", " " + String.valueOf (vpos + 1),
 		   height / 2 + 2 * cHeight + 2 * pcHeight + halfGutter + 5);
 	
 	// Draw the strings, char by char, colouring the characters

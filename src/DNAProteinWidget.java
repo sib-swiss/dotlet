@@ -110,9 +110,9 @@ public class DNAProteinWidget extends SeqPairWidget
 	    
 	highlightWindow (); // draw the comparison window
 
-	drawLabel (hsName + " (translated) ", " " + hpos,
+	drawLabel (hsName + " (translated) ", " " + String.valueOf (hpos + 1),
 		    height / 2 - 2 * cHeight - half_gutter - 4);
-	drawLabel (vsName + " ", " " + vpos, height / 2 + 3 * cHeight + half_gutter
+	drawLabel (vsName + " ", " " + String.valueOf (vpos + 1), height / 2 + 3 * cHeight + half_gutter
 	+ 7);
 	
 	// And finally:

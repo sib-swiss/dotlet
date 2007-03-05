@@ -115,12 +115,16 @@ public class DNA
 		double ATGC = 0.0;
 		
 		for (int i = 0; i < l; i++)
+		{
 		    if (seq.charAt (i) == 'A' ||
 			seq.charAt (i) == 'T' ||
 			seq.charAt (i) == 'G' ||
-			seq.charAt (i) == 'C')
-	
-			++ATGC;
+			seq.charAt (i) == 'C' ||
+			seq.charAt (i) == 'U') //Seb: Add Uracil management
+
+		    ++ATGC;
+		}
+		//System.out.println("Done");
 	
 		// We say it's DNA if there is more than 80% ATGC
 		if (ATGC / (double) l > 0.8)
