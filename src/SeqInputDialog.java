@@ -79,9 +79,10 @@ public class SeqInputDialog extends Frame
 			if ((rawSeq.charAt (i) >= 'A' && rawSeq.charAt (i) <= 'Z') ||
 			    (rawSeq.charAt (i) >= 'a' && rawSeq.charAt (i) <= 'z'))
 				tmp.append (Character.toUpperCase (rawSeq.charAt (i)));
+		    
 					
-				
-		    inputPanel.addSequence (nameField.getText (), tmp.toString ());
+		    inputPanel.addSequence (nameField.getText (), tmp.toString ().replace('U', 'T'));
+		    //Seb: replace Uracil bases to T to deal easily with automatic translation and so on ...
 		    
 		    /*modification by Olivier*/
 			inputPanel.setDialog(null);

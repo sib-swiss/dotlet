@@ -61,10 +61,12 @@ public class Dotlet extends Applet
     try{ // case we are not in a browser!
       while(name!=null){
 	name=getParameter("name"+String.valueOf(count));
-	seq=getParameter("seq"+String.valueOf(count)).toUpperCase();
+	seq=getParameter("seq"+String.valueOf(count)).toUpperCase().replace('U', 'T');
 	/*Seb: every input seq, from input button or applet parameters, are shifted to uppercase
 	 * because most of seq handlings are made with uppercase letters
 	 e.g.: check if seq is DNA or Prot - DNA seq translation */
+    //Seb: replace Uracil bases to T to deal easily with automatic translation and so on ...
+	
 	if(name!=null && seq!=null){
 	  inputPanel.addSequence(name,seq);
 	}
