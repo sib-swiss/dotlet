@@ -12,6 +12,7 @@ public class SeqPairPanel extends Panel implements AdjustmentListener{
     private Scrollbar vertScrollbar=new Scrollbar(Scrollbar.HORIZONTAL,0,1,0,255);
     private int vspace=5;
     private KeyListener keyListener;
+    public boolean DNAvsProt = true; //Seb: check status of seq: true if seq have the same nature, else false
 
     public SeqPairPanel(DotterPanel dp){
 		dotterPanel=dp;
@@ -43,8 +44,8 @@ public class SeqPairPanel extends Panel implements AdjustmentListener{
     }
     public Dimension getPreferredSize(){
 		Dimension dim=horizScrollbar.getPreferredSize();
-		return new Dimension(255,110+2*dim.height+2*vspace);
-    }    
+		return new Dimension(255,120+2*dim.height+2*vspace);
+    }
     public void setWidget(String horizontalName,
 			  String horizontalSequence,
 			  String verticalName,
@@ -65,6 +66,7 @@ public class SeqPairPanel extends Panel implements AdjustmentListener{
 						       comparisonMatrix,
 						       halfWindowSize);
 			scrollLength =  horizontalSequence.length ()+ halfWindowSize;
+			DNAvsProt = true;
 		    }
 		    else{
 			// DNA vs. prot
@@ -82,6 +84,7 @@ public class SeqPairPanel extends Panel implements AdjustmentListener{
 							      comparisonMatrix,
 							      halfWindowSize);
 			scrollLength =  (horizontalSequence.length ()) / 3 - 2 + halfWindowSize;
+			DNAvsProt = false;
 		    }
 		}
 		else{
@@ -91,6 +94,7 @@ public class SeqPairPanel extends Panel implements AdjustmentListener{
 							   comparisonMatrix,
 							   halfWindowSize);
 		    scrollLength =  horizontalSequence.length ()+ halfWindowSize;
+		    DNAvsProt = true;
 		}
 
 		horizScrollbar.setValues(halfWindowSize+1,

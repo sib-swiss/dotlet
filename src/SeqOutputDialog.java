@@ -101,6 +101,15 @@ public class SeqOutputDialog extends Frame
 	 */
 	void searchSequences()
 	{
+		//Seb: disable selection for nt. vs prot. because nothing with biological meaning to extract
+		if ( ! DNA.isDNA(this.seqPairWidget.vs))
+		{
+			if (this.seqPairWidget.hs == null)
+			{
+				return;
+			}
+		}
+		
 		//get sequence of reference	
 		//warning: do not mix image and sequence coordinate because of the sliding window,
 		//coord correction for image/sequence translation is only made at a  

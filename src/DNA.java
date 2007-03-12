@@ -109,7 +109,7 @@ public class DNA
 	
 
     // Tests if a string is nucleotide
-    public static  boolean isDNA (String seq)
+    public static boolean isDNA (String seq)
     {
 		int l = seq.length ();
 		double ATGC = 0.0;

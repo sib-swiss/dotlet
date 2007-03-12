@@ -56,18 +56,18 @@ public class InputPanel extends Panel implements ActionListener,ItemListener{
     add(inputButton);
     inputButton.addActionListener(this);
     //updateSequenceChoice(horizChoice);
-    horizChoice.addItem("#horizontal#");
+    horizChoice.add("#horizontal#");
     add(horizChoice);
     horizChoice.setEnabled(false);
     //updateSequenceChoice(vertChoice);
-    vertChoice.addItem("# vertical #");
+    vertChoice.add("# vertical #");
     add(vertChoice);
     horizChoice.addItemListener(this);
     vertChoice.addItemListener(this);
     vertChoice.setEnabled(false);
     add(methodChoice);
     methodChoice.setEnabled(false);
-    methodChoice.addItem("#matrix choice#");
+    methodChoice.add("#matrix choice#");
     for(int i=0;i<30;i++){widthChoice.add(String.valueOf(1+2*i));}
     add(widthChoice);
     widthChoice.select("15");
@@ -147,12 +147,20 @@ public class InputPanel extends Panel implements ActionListener,ItemListener{
     methodChoice.removeAll();
     String seq1=(String)sequences.get(horizChoice.getSelectedItem());
     String seq2=(String)sequences.get(vertChoice.getSelectedItem());
+    for(int i=0;i<matrixName.length;i++){methodChoice.add(matrixName[i]);}
+    /*Seb: All matrices are read at the startup to get the max size of the matrix selector window.
+     * Now, for nt. vs nt., identity matrix is selected by default, and other choices are disable.
+     * For prot/prot, or nt/prot, choices are enable, with Blosum62 as default.
+     * Thus, matrix name are no more hidden when nt. vs nt. comparison is first selected
+     * then a prot/prot or nt/prot is secondly selected. 
+    */
     if(DNA.isDNA(seq1) && DNA.isDNA(seq2)){
-      methodChoice.addItem(X_IDENTITY);
+      methodChoice.select(X_IDENTITY);
+      methodChoice.setEnabled(false);
     }
     else{
-      for(int i=0;i<matrixName.length;i++){methodChoice.add(matrixName[i]);}
       methodChoice.select("Blosum62");
+      methodChoice.setEnabled(true);
     }
     methodChoice.addNotify();
   }	    
@@ -162,7 +170,7 @@ public class InputPanel extends Panel implements ActionListener,ItemListener{
    }
    choice.removeAll();
    for (Enumeration e = sequences.keys() ; e.hasMoreElements() ;) {
-     choice.addItem((String)e.nextElement());
+     choice.add((String)e.nextElement());
    }
    choice.addNotify();
  }
@@ -183,13 +191,14 @@ public class InputPanel extends Panel implements ActionListener,ItemListener{
     sequences.put(name,sequence);
     updateSequenceChoice(horizChoice);
     updateSequenceChoice(vertChoice);
-    itemStateChanged(null);
+    //itemStateChanged(null);
     horizChoice.setEnabled(true);
     vertChoice.setEnabled(true);
     methodChoice.setEnabled(true);
     computeButton.setEnabled(true);
     widthChoice.setEnabled(true);
     zoomChoice.setEnabled(true);
+    itemStateChanged(null);
     repaint();
   }
     private void compute(){

@@ -114,7 +114,7 @@ public class ImagePanel extends Panel implements MouseListener,
 	public void mouseClicked(MouseEvent e) 
 	{
 		/*modified by Olivier*/
-		if(e.isControlDown() && this.visualByteMap.getZoom() < 2 )
+		if(e.isControlDown() && this.visualByteMap.getZoom() < 2 && this.seqPairPanel.DNAvsProt)
 		{
 			openOutput(false);
 			this.drawSelectedSequences = true;
@@ -146,7 +146,7 @@ public class ImagePanel extends Panel implements MouseListener,
 
 	public void mouseMoved(MouseEvent e) {
 		/*modified by Olivier*/
-		if(e.isControlDown() && this.visualByteMap.getZoom() < 2)
+		if(e.isControlDown() && this.visualByteMap.getZoom() < 2 && this.seqPairPanel.DNAvsProt)
 		{
 			//System.out.println(e.getX() + " " + e.getY());	
 			this.drawSnapLimit = true;
@@ -212,7 +212,7 @@ public class ImagePanel extends Panel implements MouseListener,
 				return;
 			}
 			/*modified by Olivier*/
-			if(e.isShiftDown() && this.visualByteMap.getZoom() < 2)
+			if(e.isShiftDown() && this.visualByteMap.getZoom() < 2 && this.seqPairPanel.DNAvsProt)
 			{
 				//due to the fact that mousePressed and mouseDragged are thightly coupled,
 				//I have to separate a first click and a dragging event here using Integer.MIN_VALUE 
