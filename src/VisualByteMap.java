@@ -131,7 +131,7 @@ public class VisualByteMap{
         System.out.println(this.data[0].length);
         System.out.println(this.data[0][0].length);*/
         
-        //Sebastien: to avoid out of range selections
+        //Seb: to avoid out of range selections
         if (mapX >= this.data.length)      		
         {
         	mapX=this.data.length-1;

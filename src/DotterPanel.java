@@ -4,7 +4,7 @@ import java.awt.event.*;
 
 public class DotterPanel extends Panel implements AdjustmentListener,ActionListener{
   
-  private ImagePanel imagePanel;
+  protected ImagePanel imagePanel;
   
   private VisualByteMap visualByteMap;
   

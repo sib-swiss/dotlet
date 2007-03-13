@@ -332,7 +332,7 @@ public class ImagePanel extends Panel implements MouseListener,
 		if (needRefresh) {
 			g.setColor(Color.lightGray);
 			g.fillRect(margin, margin, maxImageWidth + 1, maxImageHeight + 1);
-			needRefresh = false;
+			//needRefresh = false; //Seb: force refreshing all the time to get a more nice background !
 		}
 		/*modified by Olivier*/
 		//after the background fillRect(), otherwise background is not correctly 

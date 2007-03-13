@@ -6,6 +6,7 @@ import java.net.URL;
 import java.util.*;
 
 import streamprint.*;
+import sun.java2d.loops.FillRect;
 
 
 public class InputPanel extends Panel implements ActionListener,ItemListener{
@@ -202,6 +203,10 @@ public class InputPanel extends Panel implements ActionListener,ItemListener{
     repaint();
   }
     private void compute(){
+    	/*Seb: add a refresh action for the dotplot image to avoid
+    	 to keep print of former image */
+    	dotterPanel.imagePanel.getBackground();
+    	dotterPanel.imagePanel.repaint(0, 0, getWidth(), getHeight());
 		if(sequences.isEmpty()){
 		    dotterPanel.displayMessage("FIRST input sequence");
 		    return;
