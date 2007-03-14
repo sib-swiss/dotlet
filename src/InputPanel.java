@@ -211,7 +211,7 @@ public class InputPanel extends Panel implements ActionListener,ItemListener{
 		    dotterPanel.displayMessage("FIRST input sequence");
 		    return;
 		}	    
-		dotterPanel.displayMessage("computing"); // does not work
+		dotterPanel.displayMessage("\ncomputing"); // does not work
 		String horizontalName=horizChoice.getSelectedItem();
 		String horizontalSequence=(String)sequences.get(horizontalName);
 		String verticalName=vertChoice.getSelectedItem();
