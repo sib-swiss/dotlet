@@ -21,7 +21,7 @@ public class DNAProteinScoreTable extends ScoreTable
     {
 	super (w, m, vbm);
 
-	System.out.println ("Ctor called.");
+	//System.out.println ("Ctor called."); //Seb: comment some useless printings
 	
 	// Scores are tripled since we compute a sum over the 3 frames
 	System.out.println ("Scores range from " + minScore + " to " + maxScore);
@@ -31,12 +31,13 @@ public class DNAProteinScoreTable extends ScoreTable
 	frame1 = DNA.translate(h).toCharArray ();
 	frame2 = DNA.translate(h.substring (1)).toCharArray ();
 	frame3 = DNA.translate(h.substring (2)).toCharArray ();
-	System.out.print (" Done.");
+	System.out.print (" Done.\n");
 	va = v.toCharArray ();
 	
-	System.out.println (frame1);
+	//Seb: comment some useless printings which seem to slow execution time with Opera browser !
+	/*System.out.println (frame1);
 	System.out.println (" " + new String(frame2));
-	System.out.println ("  " + new String(frame3));
+	System.out.println ("  " + new String(frame3));*/
 
 	// This is the length over which the 3 frames overlap
 	// (I did a drawing, so believe me.)

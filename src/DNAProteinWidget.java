@@ -38,7 +38,8 @@ public class DNAProteinWidget extends SeqPairWidget
 	// we take frame 1 from the third aa, frame 2 from the second,
 	// and frame 3 from the first.
 
-	System.out.println (sb1);
+    /*Seb: comment some useless printings which seem to slow execution time with Opera browser !
+	System.out.println (sb1);*/
 	
 	// replace '[' ('Z' + 1) by '*' (STOP codon)	
 	for (int i = 0; i < sb1.length(); i++)
@@ -56,11 +57,12 @@ public class DNAProteinWidget extends SeqPairWidget
 	frame2 = sb2.toString().substring (1, f2.length ());
 	frame3 = sb3.toString().substring (0, f3.length ());
 	
+	/*Seb: comment some useless printings which seem to slow execution time with Opera browser !
 	System.out.println (frame1);
 
 	System.out.println ("  " + frame1);
 	System.out.println ("  " + frame2);
-	System.out.println ("  " + frame3);
+	System.out.println ("  " + frame3);*/
 
 	// now, the frames still have different lengths, and we clip
 	// them to the length of frame 1:
@@ -68,9 +70,10 @@ public class DNAProteinWidget extends SeqPairWidget
 	frame2 = frame2.substring (0, frame1.length ());
 	frame3 = frame3.substring (0, frame1.length ());
 
+	/*Seb: comment some useless printings which seem to slow execution time with Opera browser !
 	System.out.println (frame1);
 	System.out.println (frame2);
-	System.out.println (frame3);
+	System.out.println (frame3);*/
 
 	hl = frame1.length ();
 	vl = vs.length ();

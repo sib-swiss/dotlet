@@ -220,7 +220,8 @@ public class DNA
 	if (aa == null)
 	    throw new UnknownCodonException ("Codon " + codon + " is unknown.");
 
-	System.out.println ("Codon '" + codon + "' translates into " + aa); 
+	/*Seb: comment some useless printings which seem to slow execution time with Opera browser !
+	System.out.println ("Codon '" + codon + "' translates into " + aa);*/ 
 	
 	return (Character) aa;
     }

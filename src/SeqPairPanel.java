@@ -54,7 +54,7 @@ public class SeqPairPanel extends Panel implements AdjustmentListener{
 			  int halfWindowSize)
 	throws UnknownCodonException{
 		System.out.println ("horiz length: " + horizontalSequence.length());
-		System.out.println ("vert length: " + verticalSequence.length());
+		System.out.println ("vert  length: " + verticalSequence.length());
 		if(seqPairWidget!=null){
 		    remove(seqPairWidget);
 		}
@@ -71,7 +71,7 @@ public class SeqPairPanel extends Panel implements AdjustmentListener{
 		    else{
 			// DNA vs. prot
 			String frame1, frame2, frame3;
-			
+
 			frame1 = DNA.translate (horizontalSequence);
 			frame2 = DNA.translate (horizontalSequence.substring (1));
 			frame3 = DNA.translate (horizontalSequence.substring (2));
