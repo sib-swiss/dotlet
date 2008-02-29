@@ -187,24 +187,27 @@ public class ImagePanel extends Panel implements MouseListener,
 			{
 				y=(vertLength-windowSize+1)-posY;
 			}
-			
-			if (x < 0 || x >= imageWidth || y < 0 || y >= imageHeight) {
+			//Seb: What is the problem with mouse moved pointer on Mac ?
+			System.out.println(e.paramString());
+			if (x >= imageWidth || y >= imageHeight) {
+			//end of try ! See 50 lines below
+			//if (x < 0 || x >= imageWidth || y < 0 || y >= imageHeight) {
 				int decX = 0;
 				int decY = 0;
-				if (x < 0) {
+				/*if (x < 0) {
 					decX = -1 + x / 10;
-				} else {
+				} else {*/
 					//modified by Olivier, there was a bug in the scrolling process
 					//decX = 1 + (x - imageWidth) / 10;
 					decX = 1 + (x - imageWidth/2) / 10;  //
-				}			
+				/*}			
 				if (y < 0) {
 					decY = -1 + y / 10;
-				} else {
+				} else {*/
 					//modified by Olivier
 					//decY = 1 + (y - imageHeight) / 10;
 					decY = 1 + (y - imageHeight/2) / 10;
-				}
+				//}
 				//System.out.println(decX+" "+decY);
 				moveImageRel(decX, decY);
 				xScrollbar.setValue(getImageX());
@@ -238,6 +241,8 @@ public class ImagePanel extends Panel implements MouseListener,
 			else
 			{
 				this.drawSelectedSequences = false;
+				//Seb: What is the problem with mouse moved pointer on Mac ?
+				System.out.println(e.paramString());
 			/*end modification*/
 				
 				x = (posX + x) * visualByteMap.getZoom();

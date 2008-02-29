@@ -114,7 +114,8 @@ public class InputPanel extends Panel implements ActionListener,ItemListener{
         				+ applet.getParameter("scriptPS2PDF") + "?"
         				+ applet.getParameter("fileName"));
     			URL urlRedirection = new URL("http://"
-    					+ applet.getParameter("fileServer") 
+    					+ applet.getParameter("fileServer") + ":"
+    					+ applet.getParameter("port")
     					+ applet.getParameter("pathTemp")
     					+ applet.getParameter("fileName") + ".pdf");
     			
