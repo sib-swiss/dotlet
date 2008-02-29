@@ -188,7 +188,7 @@ public class ImagePanel extends Panel implements MouseListener,
 				y=(vertLength-windowSize+1)-posY;
 			}
 			//Seb: What is the problem with mouse moved pointer on Mac ?
-			System.out.println(e.paramString());
+			//System.out.println(e.paramString());
 			if (x >= imageWidth || y >= imageHeight) {
 			//end of try ! See 50 lines below
 			//if (x < 0 || x >= imageWidth || y < 0 || y >= imageHeight) {
@@ -242,7 +242,7 @@ public class ImagePanel extends Panel implements MouseListener,
 			{
 				this.drawSelectedSequences = false;
 				//Seb: What is the problem with mouse moved pointer on Mac ?
-				System.out.println(e.paramString());
+				//System.out.println(e.paramString());
 			/*end modification*/
 				
 				x = (posX + x) * visualByteMap.getZoom();
