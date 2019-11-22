@@ -1,9 +1,9 @@
                        Dotlet license
                        ---------------
 
-Copyright (c) Swiss Institute of Bioinformatics, Ludwig Institute for
+Copyright (c) SIB Swiss Institute of Bioinformatics, Ludwig Institute for
 Cancer Research (LICR), and Swiss Institute for Experimental Cancer
-Research (ISREC), 1999. For the purposes of this copyright, the Swiss
+Research (ISREC), 1999. For the purposes of this copyright, the SIB Swiss
 Institute of Bioinformatics acts on behalf of its partners, LICR and
 ISREC.
 
@@ -11,8 +11,8 @@ The Dotlet software is the exclusive property of the copyright
 owners, at chemin des Boveresses 155, CH-1066 EPALINGES, Switzerland,
 and is for the private internal use by academic and commercial
 users. The Dotlet program may not be copied, sold or incorporated in
-any other software product for sale without a license from the Swiss
-Institute of Bioinformatics. The Swiss Institute of Bioinformatics
+any other software product for sale without a license from the SIB Swiss
+Institute of Bioinformatics. The SIB Swiss Institute of Bioinformatics
 provides the Dotlet program WITHOUT ANY WARRANTY OF MERCHANTABILITY
 OR FITNESS FOR ANY PARTICULAR PURPOSE, OR ANY OTHER WARRANTY, EXPRESS
 OR IMPLIED.
@@ -41,7 +41,7 @@ if each of the following conditions is met:
    Other forms of redistribution are allowed only under a separate royalty-
    free agreement permitting such redistribution subject to standard
    commercial terms and conditions.  A copy of such agreement may be
-   obtained from the Swiss Institute of Bioinformatics at the above address.
+   obtained from the SIB Swiss Institute of Bioinformatics at the above address.
 
 2. Redistributions of source code must retain the copyright notices as they
    appear in each source code file, these license terms, and the
@@ -52,18 +52,18 @@ if each of the following conditions is met:
    forth as above, in the documentation and/or other materials
    provided with the distribution.  For the purposes of binary distribution
    the "Copyright Notice" refers to the following language:
-   "Copyright (c) 1999 Swiss Institute of Bioinformatics. All rights reserved."
+   "Copyright (c) 1999 SIB Swiss Institute of Bioinformatics. All rights reserved."
 
-4. Neither the name of the Swiss Institute of Bioinformatics nor
+4. Neither the name of the SIB Swiss Institute of Bioinformatics nor
    the names of its contributors may be used to endorse or promote
    products derived from this software without specific prior written
    permission.
 
-5. All redistributions must comply with the conditions imposed by the
+5. All redistributions must comply with the conditions imposed by the SIB
    Swiss Institute of Bioinformatics on certain embedded code, whose copyright
    notice and conditions for redistribution are as follows:
 
-   (a) Copyright (c) 1999 Swiss Institute of Bioinformatics.
+   (a) Copyright (c) 1999 SIB Swiss Institute of Bioinformatics.
        All rights reserved.
 
    (b) Redistribution and use in source and binary forms, with or without
@@ -80,7 +80,7 @@ if each of the following conditions is met:
 
       (iii) All advertising materials mentioning features or use of this
             software must display the following acknowledgement:  "This
-            product includes software developed by the Swiss Institute of
+            product includes software developed by the SIB Swiss Institute of
             Bioinformatics and its contributors."
 
       (iv)  Neither the name of the Institute nor the names of its

@@ -813,7 +813,7 @@ public class ImagePanel extends Panel implements MouseListener,
 		data[3] = "Score range : " + info[2];
 		data[4] = "Gray scale : " + info[3];
 		data[5] = "Date : " + DateFormat.getDateInstance(DateFormat.FULL).format(new Date());
-		data[6] = "\u00A9 Dotlet, Swiss Institute of Bioinformatics";
+		data[6] = "\u00A9 Dotlet, SIB Swiss Institute of Bioinformatics";
 		
 		for(int i=0; i<data.length; i++)
 		{

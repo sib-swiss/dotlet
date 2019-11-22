@@ -23,4 +23,4 @@ cmp2java.pl, that convert symbol comparison tables in the .mat and .cmp
 formats into Java code suitable for use with Dotlet.
 
 Thomas Junier
-<Thomas.Junier@isrec.unil.ch> 
+<Thomas.Junier@sib.swiss> 
